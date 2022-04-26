@@ -75,7 +75,7 @@ class NeteaseCloudMusic(unittest.TestCase):
                         result1.close()
 
                 else:
-                    with open(case_result, 'a') as result1:
+                    with open(case_result, 'w') as result1:
                         driver.implicitly_wait(5)
                         result1.write(f"# case:{casenumber}检查话题资源页面内容展示错误")
                         result1.close()
@@ -88,7 +88,7 @@ class NeteaseCloudMusic(unittest.TestCase):
 
         except:
 
-            with open(case_result, 'a') as result1:
+            with open(case_result, 'w') as result1:
                 driver.implicitly_wait(5)
                 result1.write(f"# case:{casenumber}检查话题资源页面内容展示错误")
                 result1.close()
