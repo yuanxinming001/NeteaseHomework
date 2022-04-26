@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 from app_information import desired_caps  # 导入被测试app的信息
 import uiautomator2
 import unittest, time, re
-import startmail
 
 case_result = '/Users/yuanxinming/Desktop/everday/result.html'
 
