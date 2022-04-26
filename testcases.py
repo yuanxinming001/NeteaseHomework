@@ -7,7 +7,7 @@ from app_information import desired_caps  # 导入被测试app的信息
 import uiautomator2
 import unittest, time, re
 
-case_result = '/Users/yuanxinming/python_demo/NeteaseMusice-main/NeteaseHomework/result3.html'
+case_result = '/Users/yuanxinming/python_demo/NeteaseMusice-main/NeteaseHomework/resulttend'
 
 # case 条数
 casenumber = 0
@@ -80,6 +80,7 @@ class NeteaseCloudMusic(unittest.TestCase):
                         result1.write(f"# case:{casenumber}检查话题资源页面内容展示错误")
                         result1.close()
                         print(f'------------------结束执行case{casenumber}------------------------')
+                        driver.fin
 
             except:
 
