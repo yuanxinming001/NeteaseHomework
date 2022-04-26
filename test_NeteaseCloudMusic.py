@@ -12,4 +12,8 @@ from Email import emailya
 
 if __name__ == "__main__":
     unittest.main()
-    emailya()
+    unittest.emailya()
+
+
+
+

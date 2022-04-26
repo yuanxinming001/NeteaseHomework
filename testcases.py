@@ -6,8 +6,9 @@ from selenium.webdriver.common.by import By
 from app_information import desired_caps  # 导入被测试app的信息
 import uiautomator2
 import unittest, time, re
+import Email
 
-case_result = '/Users/yuanxinming/python_demo/NeteaseMusice-main/NeteaseHomework/result.py'
+case_result = '/Users/yuanxinming/Desktop/everday/result.html'
 
 # case 条数
 casenumber = 0
@@ -22,6 +23,7 @@ class NeteaseCloudMusic(unittest.TestCase):
         self.driver.implicitly_wait(20)
         self.verificationErrors = []  # 脚本运行时，错误的信息将被打印到这个列表中#
         self.accept_next_alert = True  # 是否继续接受下一个警告#
+
 
 
     def test05_muscilist(self, uiauto2=uiautomator2):
@@ -68,16 +70,16 @@ class NeteaseCloudMusic(unittest.TestCase):
             try:
 
                 if officialmusiclist and elitemusictab and sharetab:
-                    with open(case_result, 'a') as result1:
+                    with open(case_result, 'w') as result1:
                         driver.implicitly_wait(5)
-                        result1.write(f"# case:{casenumber}歌单广场页面展示正确\n")
-                        print("# 歌单广场页面展示正确")
+                        result1.write(f"case:{casenumber}歌单广场页面展示正确\n")
+                        print("歌单广场页面展示正确")
                         result1.close()
 
                 else:
                     with open(case_result, 'w') as result1:
                         driver.implicitly_wait(5)
-                        result1.write(f"# case:{casenumber}检查话题资源页面内容展示错误")
+                        result1.write(f"case:{casenumber}检查话题资源页面内容展示错误\n")
                         result1.close()
                         print(f'------------------结束执行case{casenumber}------------------------')
                         driver.fin
@@ -90,6 +92,6 @@ class NeteaseCloudMusic(unittest.TestCase):
 
             with open(case_result, 'w') as result1:
                 driver.implicitly_wait(5)
-                result1.write(f"# case:{casenumber}检查话题资源页面内容展示错误")
+                result1.write(f"case:{casenumber}检查话题资源页面内容展示错误\n")
                 result1.close()
                 print('检查点击歌单龙珠可以进入歌单广场用例执行失败')
