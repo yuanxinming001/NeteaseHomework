@@ -12,7 +12,7 @@ from Email import emailya
 
 if __name__ == "__main__":
     unittest.main()
-    unittest.emailya()
+
 
 
 
