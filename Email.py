@@ -27,7 +27,6 @@ def emailya():
         print("Error：Fail")
 
 
-emailya()
 
 
 
