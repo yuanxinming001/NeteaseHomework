@@ -1,9 +1,9 @@
 import smtplib
 from email.mime.text import MIMEText
+import result
 
 
-
-def emailya():
+def emailya(result):
     # 登陆邮箱
     sent = smtplib.SMTP()
     sent.connect('smtp.qq.com', 25)
@@ -12,8 +12,9 @@ def emailya():
     sent.login(mail_name, mail_password)  # 登陆
 
     # 编辑邮件内容
-    to = ['2243418079@qq.com']  # 收件人邮箱地址
-    content = MIMEText('你好，我是爱你的人🍦')  # 正文内容
+    to = ['2431542413@qq.com']  # 收件人邮箱地址
+    content = MIMEText(result)  # 正文内容
+    print(result)
     content['Subject'] = '漂流瓶'  # 邮件标题
     content['From'] = mail_name  # 发件人
     content['To'] = ','.join(to)  # 收件人，用逗号连接多个邮件，实现群发
@@ -25,3 +26,6 @@ def emailya():
         sent.close()
     except smtplib.SMTPException:
         print("Error：Fail")
+
+
+

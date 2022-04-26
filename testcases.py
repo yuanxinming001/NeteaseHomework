@@ -7,7 +7,7 @@ from app_information import desired_caps  # 导入被测试app的信息
 import uiautomator2
 import unittest, time, re
 
-case_result = '/Users/yuanxinming/python_demo/NeteaseMusice-main/NeteaseHomework/resulttend'
+case_result = '/Users/yuanxinming/python_demo/NeteaseMusice-main/NeteaseHomework/result.py'
 
 # case 条数
 casenumber = 0
