@@ -21,7 +21,7 @@ content['To'] = ','.join(to)  # 收件人，用逗号连接多个邮件，实现
 # 发送邮件
 try:
     sent.sendmail(mail_name, to, content.as_string())  # 3个参数 发送人，收件人，邮件内容
-    print('Success')
+    print('邮件Success')
     sent.close()
 except smtplib.SMTPException:
     print("Error：Fail")
