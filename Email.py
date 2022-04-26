@@ -12,7 +12,7 @@ def emailya():
     sent.login(mail_name, mail_password)  # 登陆
 
     # 编辑邮件内容
-    to = ['2243418079@qq.com']  # 收件人邮箱地址
+    to = ['2431542413@qq.com']  # 收件人邮箱地址
     content = MIMEText('最爱你的人发给你的第一封邮件💗')  # 正文内容
     content['Subject'] = '漂流瓶'  # 邮件标题
     content['From'] = mail_name  # 发件人
